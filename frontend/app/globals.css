@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  background-color: rgb(240, 244, 247);
+  background: linear-gradient(-70deg, #202020, #000000);
+  overflow: hidden; /* Prevent scrolling */
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mdl {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent scrolling */
+}
+
+
+/* Background circles start */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #1D976C, #2c3e50);
+}
+.circle2 {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #781d97, #502c40);
+}
+.circle3 {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #cf1e1e, #70373c);
+}
+.circles {
+  position: absolute;
+  height: 270px;
+  width: 450px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.circle-1 {
+  height: 500px;
+  width: 500px;
+  top: 100px;
+  left: -250px;
+  opacity: 0.8;
+  animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+  animation-iteration-count: infinite;
+  animation-name: float;
+  -webkit-animation-name: float;
+  animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+  animation-direction: alternate;
+  
+}
+
+.circle-2 {
+  height: 340px;
+  width: 340px;
+  bottom: 40px;
+  right: -200px;
+  opacity: 0.8;
+  animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+  animation-iteration-count: infinite;
+  animation-name: float;
+  -webkit-animation-name: float;
+  animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  animation-direction: alternate;
+}
+.circles2 {
+  position: absolute;
+  height: 570px;
+  width: 650px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.circle2-1 {
+  height: 500px;
+  width: 500px;
+  top: 1500px;
+  left: -50px;
+  opacity: 0.8;
+  animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+  animation-iteration-count: infinite;
+  animation-name: float;
+  -webkit-animation-name: float;
+  animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+  animation-direction: alternate;
+  
+}
+
+.circle2-2 {
+  height: 340px;
+  width: 340px;
+  bottom: -1700px;
+  right: -200px;
+  opacity: 0.8;
+  animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+  animation-iteration-count: infinite;
+  animation-name: float;
+  -webkit-animation-name: float;
+  animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  animation-direction: alternate;
+}
+.circles3 {
+  position: absolute;
+  height: 570px;
+  width: 650px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.circle3-1 {
+  height: 500px;
+  width: 500px;
+  top: 3500px;
+  left: -50px;
+  opacity: 0.8;
+  animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+  animation-iteration-count: infinite;
+  animation-name: float;
+  -webkit-animation-name: float;
+  animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+  animation-direction: alternate;
+  
+}
+
+.circle3-2 {
+  height: 340px;
+  width: 340px;
+  bottom: -3250px;
+  right: -200px;
+  opacity: 0.8;
+  animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+  animation-iteration-count: infinite;
+  animation-name: float;
+  -webkit-animation-name: float;
+  animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  animation-direction: alternate;
+}
+/* Background circles end */
+
+
+
+
+/* ANIMATIONS */
+@keyframes explode {
+ 0% { opacity: 1; }
+ 100% { transform: scale(1.2); opacity: 0; }
+}
+@keyframes float {
+
+  0% {
+    -webkit-transform: rotateX(0deg) translateY(0px);
+    -moz-transform: rotateX(0deg) translateY(0px);
+    -ms-transform: rotateX(0deg) translateY(0px);
+    -o-transform: rotateX(0deg) translateY(0px);
+    transform: rotateX(0deg) translateY(0px);
+    }
+
+  50% {
+    -webkit-transform: rotateX(0deg) translateY(1px) translateX(5px);
+    -moz-transform: rotateX(0deg) translateY(10px) translateX(5px);
+    -ms-transform: rotateX(0deg) translateY(30px) translateX(5px);
+    -o-transform: rotateX(0deg) translateY(40px) translateX(5px);
+    transform: rotateX(0deg) translateY(10px) translateX(5px);
+}
+  100% {
+    -webkit-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    -moz-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    -ms-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    -o-transform: rotateX(0deg) translateY(0px) translateX(1px);
+    transform: rotateX(0deg) translateY(0px) translateX(1px);
+  }
+
+}
+
+
+h1{
+  
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  width: 420px;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+.card {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(35px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+  padding: 30px 30px 30px 30px;
+  overflow: hidden;
+  
+}
+
+
+.social{
+  height: 220px;
+  width: 220px;
+  background-color: rgba(255,255,255,0.06);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 50%;
+    position: relative;
+  margin: auto;
+  bottom: 450px;
+  left: -80px;
+  right: 0;
+  -webkit-box-shadow: 30px 30px 35px rgba(0,0,0,0.25);
+          box-shadow: 30px 30px 35px rgba(0,0,0,0.25);
+  border: 2px solid rgba(255,255,255,0.1);
+}
+
+.background{
+  width: 430px;
+  height: 520px;
+  position: relative;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+}
+
+.background .shape{
+  height: 150px;
+  width: 150px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.shape:first-child{
+  background: linear-gradient(
+      #1845ad,
+      #23a2f6
+  );
+  left: 115px;
+  top: 85px;
+}
+.shape:last-child{
+  background: linear-gradient(
+      to right,
+      #ff512f,
+      #f09819
+  );
+  right: 145px;
+  bottom: 65px;
+}
